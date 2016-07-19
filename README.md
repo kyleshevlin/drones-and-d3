@@ -1,7 +1,11 @@
-# Drones-and-d3
+# Drones and D3
+_and Ember_
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+I wanted to make a small Ember application that incorporated the [d3](https://github.com/d3/d3) library. After coming across [Dronestre.am](http://dronestre.am/) API, I decided to make the visual about drone strikes done by the United States. This is not really a political statement, though perhaps seeing how many strikes have taken place may have some influence on you one way or another. Either way, it makes for an interesting visual.
+
+To see the application, clone/fork the repository and get it up and running locally. I will leave the Ember CLI created instructions below for the time being to help you do that.
+
+A demo of the app will be made in the near future. 
 
 ## Prerequisites
 
