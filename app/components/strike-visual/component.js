@@ -1,3 +1,5 @@
+/* globals d3, topojson */
+
 import Ember from 'ember';
 
 export default Ember.Component.extend({
@@ -11,9 +13,9 @@ export default Ember.Component.extend({
 
     let projection = d3.geoMercator()
       .center([61, 24])
-      .scale(300)
+      .scale(300);
 
-    let path = d3.geoPath().projection(projection)
+    let path = d3.geoPath().projection(projection);
 
     let container = d3.select('#strike-visual');
 
@@ -31,7 +33,9 @@ export default Ember.Component.extend({
     let strikesGroup = g.append('g').classed('strikes-group', true);
 
     d3.json('data/countries.topojson', function(error, map) {
-      if ( error ) return console.error(error);
+      if ( error ) {
+        return console.error(error);
+      }
 
       countriesGroup.selectAll('.country')
         .data(topojson.feature(map, map.objects.collection).features)
@@ -41,9 +45,9 @@ export default Ember.Component.extend({
             return 'country ' + name;
           })
           .attr('d', path)
-          .style('fill', function(d,i) { return color(i)})
+          .style('fill', function(d,i) { return color(i); })
           .style('stroke', '#fff')
-          .style('opacity', '.75')
+          .style('opacity', '.75');
 
       strikesGroup.selectAll('circle')
         .data(data)
@@ -54,7 +58,7 @@ export default Ember.Component.extend({
             r: 2,
           })
           .style('fill', 'red')
-          .style('stroke', 'black')
+          .style('stroke', 'black');
 
     });
 
@@ -71,6 +75,6 @@ export default Ember.Component.extend({
           .attr("d", path.projection(projection));
       });
 
-    svg.call(zoom)
+    svg.call(zoom);
   }
 });

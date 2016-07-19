@@ -1,0 +1,13 @@
+@import "normalize.css";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 990px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

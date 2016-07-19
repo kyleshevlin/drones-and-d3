@@ -20,9 +20,9 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  app.import('bower_components/d3/d3.js');
-  app.import('vendor/d3-selection-multi.js');
-  app.import('vendor/topojson.js');
+  app.import('./bower_components/d3/d3.js');
+  app.import('./vendor/d3-selection-multi.js');
+  app.import('./vendor/topojson.js');
 
   return app.toTree();
 };
